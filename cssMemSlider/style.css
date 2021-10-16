@@ -63,23 +63,37 @@ input[name ='btn'] {
     margin-left: -75%;
 }
 .panel {
+    width: 100%;
     display: flex;
     margin-top: 20px;
 }
 .descr {
     width: 70%;
-}
-.descr-text {
-    max-height: 1.2rem;
-    width: 100%;
     overflow: hidden;
 }
+.descr-text {
+    width: 400%;
+    display: flex;
+}
 .text {
+    width: 25%;
+    transition: 0.5s all ease-in;
+}
+.text p {
     width: 100%;
     height: 100%;
 }
-.text p {
-    width: 120vh;
+#btn1:checked ~ .text1 {
+    margin-left: 0;
+}
+#btn2:checked ~ .text1 {
+    margin-left: -25%;
+}
+#btn3:checked ~ .text1 {
+    margin-left: -50%;
+}
+#btn4:checked ~ .text1 {
+    margin-left: -75%;
 }
 
 @media only screen and (max-width: 670px) {
@@ -98,6 +112,7 @@ input[name ='btn'] {
     .descr {
         width: 100%;
         justify-content: center;
+        margin-top: 15px;
     }
     .text {
         text-align: center;
